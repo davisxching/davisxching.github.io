@@ -55,7 +55,7 @@
     <meta property="og:url" content="https://davisxching.github.io/micronaut-with-graalvm/" />
     <meta property="og:image" content="https://davisxching.github.io/content/images/2022/04/1_BxLJuCCk3Rqz7f1mjYwsbQ.png" />
     <meta property="article:published_time" content="2022-04-05T05:46:18.000Z" />
-    <meta property="article:modified_time" content="2022-04-05T07:34:40.000Z" />
+    <meta property="article:modified_time" content="2022-04-07T14:38:12.000Z" />
     <meta property="article:tag" content="Microservices" />
     <meta property="article:tag" content="Cloud" />
     <meta property="article:tag" content="Serverless" />
@@ -112,7 +112,7 @@
     "headline": "Micronaut with GraalVM: 2022 最佳的 Java 微服務框架",
     "url": "https://davisxching.github.io/micronaut-with-graalvm/",
     "datePublished": "2022-04-05T05:46:18.000Z",
-    "dateModified": "2022-04-05T07:34:40.000Z",
+    "dateModified": "2022-04-07T14:38:12.000Z",
     "image": {
         "@type": "ImageObject",
         "url": "https://davisxching.github.io/content/images/2022/04/1_BxLJuCCk3Rqz7f1mjYwsbQ.png",
@@ -164,7 +164,7 @@
     }
     
     div.tags a {
-    	font-size: 5px;
+    	font-size: 10px;
         padding: 1px 10px;
         letter-spacing: 0px;
     }
@@ -368,7 +368,7 @@
 
                 <section class="post-content">
 
-                        <div class="text"><p>筆者在多次企業項目的實戰經驗中發現，Spring 架構下的微服務 (尤其是架設在雲上的) 實際上開銷並不輕，甚至比傳統架構「重」了許多。每顆 Pod 在 CPU 以及記憶體上的消耗，乘上 replica 以及 service 的數量，實際上大大提高了金錢上的成本。當然，我們也知道微服務架構的好處，很多企業並不會在乎這些費用，因為對他們而言，微服務所帶來的好處遠大於增加的機器開銷。</p><blockquote>為了方便溝通，我們這裡將 CPU、Memory 開銷小稱之為<strong>輕</strong>，反之則為<strong>重</strong>。</blockquote><p>除了上文中提到的開銷大，Spring 的啟動速度過慢也是令人詬病的一項缺點。在做水平擴展的時候，如果服務依賴過多，pod 的啟動速度往往會跟不上 request 打過來的速度，導致 HPA 達不到其期望的效果。會造成上述這些問題，主要是因為 Spring 依賴之間的反射機制以及 JVM 中的 JIT (Just in Time) 造成的。(當然，這些並不是缺點，而只是從開銷與啟動速度上，不夠適合微服務架構。)</p><p>但也是因為如此，很多團隊開始使用如 Go、Python 等其他語言的框架，來降低微服務集群的重量。但是，Java，在 Web 開發、大數據等方面，仍然有著非常成熟且龐大的開源社區以提供全面的框架、套件支持、碰到問題也有大量可以參考的解決方法以及資料。另外，它的入行門檻也較低，因此，市面上有非常多的工程師以及工作崗位數量。因此，雖然使用 Spring 來做微服務並不完美，但從人力成本的角度，仍然是一個不錯的選擇。</p><p>但是，這一切在最近兩三年的時間裡，正在不動聲息的發生著變化。隨著以 Kubernetes 架構為核心的團隊逐漸變多，越來越多雲原生的解決方案逐漸誕生。在 Java 框架裡，如 <a href="https://quarkus.io/"><em>Quarkus</em></a><em> 、</em><a href="https://micronaut.io/"><em>Micronaut</em></a><em> </em>這類專門為了微服務、為了 Serverless 而生的框架逐漸誕生，並逐步成熟。如今，Micronaut 也站上了 3.0 的版本。兩者在性能上都遠勝 Spring，雖然 Quarkus 在很多測評上略勝 Micronaut 一籌，但筆者還是更推薦後者。因為它們性能實際上不會差太多，而且後者跟 Spring 更加相似，讓團隊內的工程師轉換過去不會有任何負擔。而且它的文檔、社區支持程度也更高。可以把它想像成一個性能更好、成本更低的 Spring，但用起來又類似，何樂不為呢？ (這裡提供一個<a href="https://www.techempower.com/benchmarks/#section=data-r20&amp;hw=cl&amp;test=composite">全後台框架測評</a>，供大家參考。)</p><p>另外值得一提的就是，<a href="https://www.graalvm.org/"><em>GraalVM</em></a><em>，</em>它的成熟也逐步讓 Java 有了更加適合雲生態的底層 VM。它提供的 AOT (Ahead of Time)、Polyglot Programming (您可以想像大家都可以用自己最熟悉的不同語言開發同一個專案嗎？) 以及 Native Image 都讓 Java 在雲環境中，有了更優秀的生態。</p><p>當然，Spring 為了不被這兩位半路殺出的悍將甩開，也立刻提出了<em><a href="https://github.com/spring-projects-experimental/spring-native"> Spring Native 專案</a>，</em>但目前 (2022 年初)仍處於 Beta 階段。目前在成功跑成功 Spring Web 前，仍需手動調整很多依賴。等此專案成熟之後，我們再回頭來看看它的性能如何。</p></div>
+                        <div class="text"><p>筆者在多次企業項目的實戰經驗中發現，Spring 架構下的微服務 (尤其是架設在雲上的) 實際上開銷並不輕，甚至比傳統架構「重」了許多。每顆 Pod 在 CPU 以及記憶體上的消耗，乘上 replica 以及 service 的數量，實際上大大提高了金錢上的成本。當然，我們也知道微服務架構的好處，很多企業並不會在乎這些費用，因為對他們而言，微服務所帶來的好處遠大於增加的機器開銷。</p><blockquote>為了方便溝通，我們這裡將 CPU、Memory 開銷小稱之為<strong>輕</strong>，反之則為<strong>重</strong>。</blockquote><p>除了上文中提到的開銷大，Spring 的啟動速度過慢也是令人詬病的一項缺點。在做水平擴展的時候，如果服務依賴過多，pod 的啟動速度往往會跟不上 request 打過來的速度，導致 HPA 達不到其期望的效果。會造成上述這些問題，主要是因為 Spring 依賴之間的反射機制以及 JVM 中的 JIT (Just in Time) 造成的。(當然，這些並不是缺點，而只是從開銷與啟動速度上，不夠適合微服務架構。)</p><p>但也是因為如此，很多團隊開始使用如 Go、Python 等其他語言的框架，來降低微服務集群的重量。但是，Java，在 Web 開發、大數據等方面，仍然有著非常成熟且龐大的開源社區以提供全面的框架、套件支持、碰到問題也有大量可以參考的解決方法以及資料。另外，它的入行門檻也較低，因此，市面上有非常多的工程師以及工作崗位數量。因此，雖然使用 Spring 來做微服務並不完美，但從人力成本的角度來看，仍然是一個不錯的選擇。</p><p>但是，這一切在最近兩三年的時間裡，正在不動聲息的發生著變化。隨著以 Kubernetes 架構為核心的團隊逐漸變多，越來越多雲原生的解決方案逐漸誕生。在 Java 框架裡，如 <em><a href="https://quarkus.io/">Quarkus</a> 、<a href="https://micronaut.io/">Micronaut</a> </em>這類專門為了微服務、為了 Serverless 而生的框架逐漸誕生，並逐步成熟。如今，Micronaut 也站上了 3.0 的版本。兩者在性能上都遠勝 Spring，雖然 Quarkus 在很多測評上略勝 Micronaut 一籌，但筆者還是更推薦後者。因為它們性能實際上不會差太多，而且後者的使用方法跟 Spring 更加相似，讓團隊內的工程師轉換過去不會有任何負擔。而且它的文檔、社區支持程度也更高。可以把它想像成一個性能更好、成本更低的 Spring，但用起來又類似，何樂不為呢？ (這裡提供一個<a href="https://www.techempower.com/benchmarks/#section=data-r20&amp;hw=cl&amp;test=composite">全後台框架測評</a>，供大家參考。)</p><p>另外值得一提的就是，<a href="https://www.graalvm.org/"><em>GraalVM</em></a><em>，</em>它的成熟也逐步讓 Java 有了更加適合雲生態的底層 VM。它提供的 AOT (Ahead of Time)、Polyglot Programming (您可以想像大家都可以用自己最熟悉的不同語言開發同一個專案嗎？) 以及 Native Image 都讓 Java 在雲環境中，有了更優秀的生態。</p><p>當然，Spring 為了不被這兩位半路殺出的悍將甩開，也立刻提出了<em><a href="https://github.com/spring-projects-experimental/spring-native"> Spring Native 專案</a>，</em>但目前 (2022 年初)仍處於 Beta 階段。然而，在當前的情況下要成功跑起來 Spring Web 之前，仍需要手動調整很多依賴。因此，在此專案較成熟之後，我們再回頭來看看它的性能如何。目前，我們仍然會把我們的篇幅放在 Micronaut 上。</p><p>在這篇文章中，筆者將會為大家快速演示一下 Micronaut 搭配 GraalVM 的快速架設方法，並看一下它在啟動速度以及記憶體消耗上的優化，有多麼驚人！</p></div>
 
                     <!-- start: .share-buttons -->
                         <div class="share-buttons section">
