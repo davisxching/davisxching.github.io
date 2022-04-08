@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-<title>Micronaut with GraalVM: 2022 最佳的 Java 微服務框架</title>
+<title>Micronaut with GraalVM&#x27;s native-image: 2022 最佳的 Java 微服務框架</title>
 
 <meta name="HandheldFriendly" content="True" />
 <meta name="MobileOptimized" content="320" />
@@ -47,15 +47,16 @@
 
 <link rel="canonical" href="https://davisxching.github.io/micronaut-with-graalvm/" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="amphtml" href="https://davisxching.github.io/micronaut-with-graalvm/amp/" />
     
     <meta property="og:site_name" content="Davis Ching" />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Micronaut with GraalVM: 2022 最佳的 Java 微服務框架" />
+    <meta property="og:title" content="Micronaut with GraalVM&#x27;s native-image: 2022 最佳的 Java 微服務框架" />
     <meta property="og:description" content="筆者在多次企業項目的實戰經驗中發現，Spring 架構下的微服務 (尤其是架設在雲上的) 實際上開銷並不輕，甚至比傳統架構「重」了許多。每顆 Pod 在 CPU 以及記憶體上的消耗，乘上 replica 以及 service 的數量，實際上大大提高了金錢上的成本。當然，我們也知道微服務架構的好處，很多企業並不會在乎這些費用，因為對他們而言，微服務所帶來的好處遠大於增加的機器開銷。 為了方便溝通，我們這裡將 CPU、Memory 開銷小稱之為輕，反之則為重。除了上文中提到的開銷大，Spring 的啟動速度過慢也是令人詬病的一項缺點。在做水平擴展的時候，如果服務依賴過多，pod 的啟動速度往往會跟不上 request 打過來的速度，導致 HPA 達不到其期望的效果。會造成上述這些問題，主要是因為 Spring 依賴之間的反射機制以及 JVM 中的 JIT (Just" />
     <meta property="og:url" content="https://davisxching.github.io/micronaut-with-graalvm/" />
     <meta property="og:image" content="https://davisxching.github.io/content/images/2022/04/1_BxLJuCCk3Rqz7f1mjYwsbQ.png" />
     <meta property="article:published_time" content="2022-04-05T05:46:18.000Z" />
-    <meta property="article:modified_time" content="2022-04-07T14:38:12.000Z" />
+    <meta property="article:modified_time" content="2022-04-08T14:59:14.000Z" />
     <meta property="article:tag" content="Microservices" />
     <meta property="article:tag" content="Cloud" />
     <meta property="article:tag" content="Serverless" />
@@ -70,7 +71,7 @@
     
     <meta property="article:publisher" content="https://www.facebook.com/ghost" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Micronaut with GraalVM: 2022 最佳的 Java 微服務框架" />
+    <meta name="twitter:title" content="Micronaut with GraalVM&#x27;s native-image: 2022 最佳的 Java 微服務框架" />
     <meta name="twitter:description" content="筆者在多次企業項目的實戰經驗中發現，Spring 架構下的微服務 (尤其是架設在雲上的) 實際上開銷並不輕，甚至比傳統架構「重」了許多。每顆 Pod 在 CPU 以及記憶體上的消耗，乘上 replica 以及 service 的數量，實際上大大提高了金錢上的成本。當然，我們也知道微服務架構的好處，很多企業並不會在乎這些費用，因為對他們而言，微服務所帶來的好處遠大於增加的機器開銷。 為了方便溝通，我們這裡將 CPU、Memory 開銷小稱之為輕，反之則為重。除了上文中提到的開銷大，Spring 的啟動速度過慢也是令人詬病的一項缺點。在做水平擴展的時候，如果服務依賴過多，pod 的啟動速度往往會跟不上 request 打過來的速度，導致 HPA 達不到其期望的效果。會造成上述這些問題，主要是因為 Spring 依賴之間的反射機制以及 JVM 中的 JIT (Just" />
     <meta name="twitter:url" content="https://davisxching.github.io/micronaut-with-graalvm/" />
     <meta name="twitter:image" content="https://davisxching.github.io/content/images/2022/04/1_BxLJuCCk3Rqz7f1mjYwsbQ.png" />
@@ -109,10 +110,10 @@
         "url": "https://davisxching.github.io/author/davis-ching/",
         "sameAs": []
     },
-    "headline": "Micronaut with GraalVM: 2022 最佳的 Java 微服務框架",
+    "headline": "Micronaut with GraalVM&#x27;s native-image: 2022 最佳的 Java 微服務框架",
     "url": "https://davisxching.github.io/micronaut-with-graalvm/",
     "datePublished": "2022-04-05T05:46:18.000Z",
-    "dateModified": "2022-04-07T14:38:12.000Z",
+    "dateModified": "2022-04-08T14:59:14.000Z",
     "image": {
         "@type": "ImageObject",
         "url": "https://davisxching.github.io/content/images/2022/04/1_BxLJuCCk3Rqz7f1mjYwsbQ.png",
@@ -330,7 +331,7 @@
                     <header>
 
                             <div class="featured-image">
-                                <img class="lazy" src="/assets/images/transparent.gif?v=a6599e5a67" data-src="/content/images/size/w760h400/2022/04/1_BxLJuCCk3Rqz7f1mjYwsbQ.png" alt="Micronaut with GraalVM: 2022 最佳的 Java 微服務框架">
+                                <img class="lazy" src="/assets/images/transparent.gif?v=a6599e5a67" data-src="/content/images/size/w760h400/2022/04/1_BxLJuCCk3Rqz7f1mjYwsbQ.png" alt="Micronaut with GraalVM&#x27;s native-image: 2022 最佳的 Java 微服務框架">
                                     <div class="tags absolute hide-on-mobile">
                                             <a href="/tag/microservices/" class="ctag ctag-microservices" data-id="ctag-microservices">Microservices</a>
                                             <a href="/tag/cloud/" class="ctag ctag-cloud" data-id="ctag-cloud">Cloud</a>
@@ -358,7 +359,7 @@
 
                             <div class="clear"></div>
 
-                            <h1 class="title no-thumb large bold">Micronaut with GraalVM: 2022 最佳的 Java 微服務框架</h1>
+                            <h1 class="title no-thumb large bold">Micronaut with GraalVM&#x27;s native-image: 2022 最佳的 Java 微服務框架</h1>
                         </div>
                         <!-- end: .meta -->
 
@@ -368,7 +369,48 @@
 
                 <section class="post-content">
 
-                        <div class="text"><p>筆者在多次企業項目的實戰經驗中發現，Spring 架構下的微服務 (尤其是架設在雲上的) 實際上開銷並不輕，甚至比傳統架構「重」了許多。每顆 Pod 在 CPU 以及記憶體上的消耗，乘上 replica 以及 service 的數量，實際上大大提高了金錢上的成本。當然，我們也知道微服務架構的好處，很多企業並不會在乎這些費用，因為對他們而言，微服務所帶來的好處遠大於增加的機器開銷。</p><blockquote>為了方便溝通，我們這裡將 CPU、Memory 開銷小稱之為<strong>輕</strong>，反之則為<strong>重</strong>。</blockquote><p>除了上文中提到的開銷大，Spring 的啟動速度過慢也是令人詬病的一項缺點。在做水平擴展的時候，如果服務依賴過多，pod 的啟動速度往往會跟不上 request 打過來的速度，導致 HPA 達不到其期望的效果。會造成上述這些問題，主要是因為 Spring 依賴之間的反射機制以及 JVM 中的 JIT (Just in Time) 造成的。(當然，這些並不是缺點，而只是從開銷與啟動速度上，不夠適合微服務架構。)</p><p>但也是因為如此，很多團隊開始使用如 Go、Python 等其他語言的框架，來降低微服務集群的重量。但是，Java，在 Web 開發、大數據等方面，仍然有著非常成熟且龐大的開源社區以提供全面的框架、套件支持、碰到問題也有大量可以參考的解決方法以及資料。另外，它的入行門檻也較低，因此，市面上有非常多的工程師以及工作崗位數量。因此，雖然使用 Spring 來做微服務並不完美，但從人力成本的角度來看，仍然是一個不錯的選擇。</p><p>但是，這一切在最近兩三年的時間裡，正在不動聲息的發生著變化。隨著以 Kubernetes 架構為核心的團隊逐漸變多，越來越多雲原生的解決方案逐漸誕生。在 Java 框架裡，如 <em><a href="https://quarkus.io/">Quarkus</a> 、<a href="https://micronaut.io/">Micronaut</a> </em>這類專門為了微服務、為了 Serverless 而生的框架逐漸誕生，並逐步成熟。如今，Micronaut 也站上了 3.0 的版本。兩者在性能上都遠勝 Spring，雖然 Quarkus 在很多測評上略勝 Micronaut 一籌，但筆者還是更推薦後者。因為它們性能實際上不會差太多，而且後者的使用方法跟 Spring 更加相似，讓團隊內的工程師轉換過去不會有任何負擔。而且它的文檔、社區支持程度也更高。可以把它想像成一個性能更好、成本更低的 Spring，但用起來又類似，何樂不為呢？ (這裡提供一個<a href="https://www.techempower.com/benchmarks/#section=data-r20&amp;hw=cl&amp;test=composite">全後台框架測評</a>，供大家參考。)</p><p>另外值得一提的就是，<a href="https://www.graalvm.org/"><em>GraalVM</em></a><em>，</em>它的成熟也逐步讓 Java 有了更加適合雲生態的底層 VM。它提供的 AOT (Ahead of Time)、Polyglot Programming (您可以想像大家都可以用自己最熟悉的不同語言開發同一個專案嗎？) 以及 Native Image 都讓 Java 在雲環境中，有了更優秀的生態。</p><p>當然，Spring 為了不被這兩位半路殺出的悍將甩開，也立刻提出了<em><a href="https://github.com/spring-projects-experimental/spring-native"> Spring Native 專案</a>，</em>但目前 (2022 年初)仍處於 Beta 階段。然而，在當前的情況下要成功跑起來 Spring Web 之前，仍需要手動調整很多依賴。因此，在此專案較成熟之後，我們再回頭來看看它的性能如何。目前，我們仍然會把我們的篇幅放在 Micronaut 上。</p><p>在這篇文章中，筆者將會為大家快速演示一下 Micronaut 搭配 GraalVM 的快速架設方法，並看一下它在啟動速度以及記憶體消耗上的優化，有多麼驚人！</p></div>
+                        <div class="text"><p>筆者在多次企業項目的實戰經驗中發現，Spring 架構下的微服務 (尤其是架設在雲上的) 實際上開銷並不輕，甚至比傳統架構「重」了許多。每顆 Pod 在 CPU 以及記憶體上的消耗，乘上 replica 以及 service 的數量，實際上大大提高了金錢上的成本。當然，我們也知道微服務架構的好處，很多企業並不會在乎這些費用，因為對他們而言，微服務所帶來的好處遠大於增加的機器開銷。</p><blockquote>為了方便溝通，我們這裡將 CPU、Memory 開銷小稱之為<strong>輕</strong>，反之則為<strong>重</strong>。</blockquote><p>除了上文中提到的開銷大，Spring 的啟動速度過慢也是令人詬病的一項缺點。在做水平擴展的時候，如果服務依賴過多，pod 的啟動速度往往會跟不上 request 打過來的速度，導致 HPA 達不到其期望的效果。會造成上述這些問題，主要是因為 Spring 依賴之間的反射機制以及 JVM 中的 JIT (Just in Time) 造成的。(當然，這些並不是缺點，而只是從開銷與啟動速度上，不夠適合微服務架構。)</p><p>但也是因為如此，很多團隊開始使用如 Go、Python 等其他語言的框架，來降低微服務集群的重量。但是，Java，在 Web 開發、大數據等方面，仍然有著非常成熟且龐大的開源社區以提供全面的框架與套件支持。碰到問題也有大量可以參考的解決方法以及資料。另外，它的入行門檻也較低，市面上可以找到非常多的 Java 工程師，反過來，雇主也提供了大量的 Java 工作崗位。因此，雖然使用 Spring 來做微服務並不完美，但從人力成本的角度來看，仍然是一個不錯的選擇。</p><p>但是，這一切在最近兩三年的時間裡，正在不動聲息地發生著變化。隨著以 Kubernetes 架構為核心的團隊逐漸變多，越來越多雲原生的解決方案逐漸誕生。在 Java 框架裡，如 <a href="https://quarkus.io/"><em>Quarkus</em></a><em> 、</em><a href="https://micronaut.io/"><em>Micronaut</em></a><em> </em>這類專門為了微服務、為了 Serverless 而生的框架逐漸誕生，並逐步成熟。如今，Micronaut 也站上了 3.0 的版本。兩者在性能上都遠勝 Spring，雖然 Quarkus 在很多測評上略勝 Micronaut 一籌，但筆者還是更推薦後者。因為它們性能實際上不會差太多，而且後者的使用方法跟 Spring 更加相似，讓團隊內的工程師轉換過去不會有任何負擔。而且它的文檔、社區支持程度也更高。可以把它想像成一個性能更好、成本更低的 Spring，但用起來又類似，何樂而不為呢？ (這裡提供一個<a href="https://www.techempower.com/benchmarks/#section=data-r20&amp;hw=cl&amp;test=composite">全後台框架測評</a>，供大家參考。)</p><blockquote>Quarkus 中使用了 Netty，這也是它測評結果更好的原因之一。</blockquote><p>另外值得一提的就是，<a href="https://www.graalvm.org/"><em>GraalVM</em></a><em>，</em>它的成熟也逐步讓 Java 有了更加適合雲生態的底層 VM。它提供的 AOT (Ahead of Time)、Polyglot Programming (您可以想像大家都可以用自己最熟悉的不同語言開發同一個專案嗎？) 以及 Native Image 都讓 Java 在雲環境中，有了更優秀的生態。</p><p>當然，Spring 為了不被這兩位半路殺出的悍將甩開，也立刻提出了<em><a href="https://github.com/spring-projects-experimental/spring-native"> Spring Native 專案</a>，</em>但目前 (2022 年初)仍處於 Beta 階段。然而，在當前的情況下要成功跑起來 Spring Web 之前，仍需要手動調整很多依賴。因此，在此專案較成熟之後，我們再回頭來看看它的性能如何。目前，我們仍然會把我們的篇幅放在 Micronaut 上。</p><p>在這篇文章中，筆者將會為大家快速演示一下 Micronaut 搭配 GraalVM 的快速架設方法，並看一下它在啟動速度以及記憶體消耗上的優化，有多麼驚人！</p><blockquote>以下內容主要參考官方文檔 <a href="https://guides.micronaut.io/latest/micronaut-creating-first-graal-app.html">https://guides.micronaut.io/latest/micronaut-creating-first-graal-app.html</a> </blockquote><hr><h2 id="%E7%92%B0%E5%A2%83%E9%85%8D%E7%BD%AE">環境配置</h2><ul><li>Docker</li><li>Gradle (Maven 也行，但本篇不會介紹)</li><li>JAVA_HOME 配置成功且使用 GraalVM JDK (&gt;= 1.8)</li></ul><blockquote>自動安裝：<a href="https://sdkman.io/jdks#grl">https://sdkman.io/jdks#grl</a><br>手動安裝：<a href="https://www.graalvm.org/22.0/docs/getting-started/">https://www.graalvm.org/22.0/docs/getting-started/</a></blockquote><ul><li>GraalVM 具備 <a href="https://www.graalvm.org/22.0/reference-manual/native-image/">native-image</a> 組件：</li></ul><pre><code>gu install native-image</code></pre><hr><h2 id="%E5%88%9D%E5%A7%8B%E5%8C%96%E5%B0%88%E6%A1%88">初始化專案</h2><p>我們可以使用 <a href="https://launch.micronaut.io/">Micronaut Launch</a> 來初始化專案，在此頁面中填寫專案的資訊以及它需要被引入的依賴，使用方式跟 Spring 所提供的 Initializr 類似:</p><figure class="kg-card kg-image-card kg-width-full kg-card-hascaption"><img src="https://davisxching.github.io/content/images/2022/04/image-1.png" class="kg-image" alt loading="lazy" width="1345" height="530" srcset="https://davisxching.github.io/content/images/size/w600/2022/04/image-1.png 600w, https://davisxching.github.io/content/images/size/w1000/2022/04/image-1.png 1000w, https://davisxching.github.io/content/images/2022/04/image-1.png 1345w"><figcaption>1.可以在左下角的「FEATURES」中選擇需要的依賴</figcaption></figure><p></p><figure class="kg-card kg-image-card kg-width-full kg-card-hascaption"><img src="https://davisxching.github.io/content/images/2022/04/image-2.png" class="kg-image" alt loading="lazy" width="1002" height="791" srcset="https://davisxching.github.io/content/images/size/w600/2022/04/image-2.png 600w, https://davisxching.github.io/content/images/size/w1000/2022/04/image-2.png 1000w, https://davisxching.github.io/content/images/2022/04/image-2.png 1002w"><figcaption>2.這裡我們輸入或找到「graalvm」，並選擇添加</figcaption></figure><p></p><figure class="kg-card kg-image-card kg-width-full kg-card-hascaption"><img src="https://davisxching.github.io/content/images/2022/04/image-3.png" class="kg-image" alt loading="lazy" width="1340" height="529" srcset="https://davisxching.github.io/content/images/size/w600/2022/04/image-3.png 600w, https://davisxching.github.io/content/images/size/w1000/2022/04/image-3.png 1000w, https://davisxching.github.io/content/images/2022/04/image-3.png 1340w"><figcaption>3. 確認無誤後，就可以點擊右下角的按鈕，選擇需要的方法來生成 Micronaut 專案</figcaption></figure><p>以上這些步驟，也可以通過 <a href="https://docs.micronaut.io/latest/guide/#cli">Micronaut Command Line Interface</a> 語句來實現：</p><pre><code class="language-sh">mn create-app --build=gradle --jdk=17 --lang=java --test=junit --features=graalvm com.example.hello-micronaut-and-graalvm</code></pre><blockquote>對於那些使用 IntelliJ IDEA 的讀者，記得需要在設定裡勾選 Peferences ➡ Build, Execution, Deployment ➡ Compiler ➡ Annotation Processors ➡ ☑ Enable annotation processing.</blockquote><hr><h2 id="%E7%B0%A1%E6%98%93%E7%9A%84-api">簡易的 API</h2><p>用您熟悉的 IDE 打開項目，會發現，其項目結構跟 Spring 基本上沒有不同，基本上可以直接上手。</p><p>這裡簡單地創建一個 Service 與 Controller，寫一個非常簡單的 API (打招呼並順便告知時間)：</p><p><em>GreetingService.java</em></p><pre><code class="language-java">package com.example.service;
+
+import jakarta.inject.Singleton;
+
+import java.util.Date;
+
+@Singleton
+public class GreetingService {
+
+    public String greeting() {
+        return String.format("Hello! It's %s!", new Date());
+    }
+}</code></pre><blockquote>這裡的 <code>@Singleton</code> 與 Spring 中的 <code>@Service</code> 類似，讓這個類以單例的形式存在。</blockquote><p>GreetingController.java</p><pre><code class="language-java">package com.example.controller;
+
+import com.example.service.GreetingService;
+import io.micronaut.http.annotation.Controller;
+import io.micronaut.http.annotation.Get;
+
+@Controller("/greeting")
+public record GreetingController(GreetingService greetingService) {
+
+    @Get("/ask-time")
+    public String greeting() {
+        return greetingService.greeting();
+    }
+}</code></pre><blockquote>這裡用了 record，如果不習慣的話，用 class 也完全可行。</blockquote><p>這樣就完成了一個簡單的 API ，這是其直接運行的效果，看起來只花 1 秒啟動很不錯，但其實還可以再優化10倍以上：</p><figure class="kg-card kg-image-card kg-width-full kg-card-hascaption"><img src="https://davisxching.github.io/content/images/2022/04/image-4.png" class="kg-image" alt loading="lazy" width="763" height="222" srcset="https://davisxching.github.io/content/images/size/w600/2022/04/image-4.png 600w, https://davisxching.github.io/content/images/2022/04/image-4.png 763w"><figcaption>可以注意一下 1663 ms，再比較使用 Native Image 之後會快多少</figcaption></figure><figure class="kg-card kg-image-card kg-width-full"><img src="https://davisxching.github.io/content/images/2022/04/image-5.png" class="kg-image" alt loading="lazy" width="645" height="34" srcset="https://davisxching.github.io/content/images/size/w600/2022/04/image-5.png 600w, https://davisxching.github.io/content/images/2022/04/image-5.png 645w"></figure><hr><h2 id="%E5%BB%BA%E7%BD%AE%E8%88%87%E9%83%A8%E7%BD%B2">建置與部署</h2><blockquote>【Good to know】如果不想用容器化的話可以使用：./gradlew nativeCompile</blockquote><p>接下來，我們可以使用 GraalVM 的 Native Image 將此 API 建置並部署至 Docker 上。直接使用下列指令即可:</p><pre><code class="language-sh">./gradlew dockerBuildNative</code></pre><p>只需要這一句，就可以將此專案建置至成 image 。以下是該指令的具體內容：</p><pre><code class="language-Dockerfile">FROM ghcr.io/graalvm/native-image:ol8-java17-22.0.0.2 AS graalvm
+WORKDIR /home/app
+
+COPY layers/libs /home/app/libs
+COPY layers/classes /home/app/classes
+COPY layers/resources /home/app/resources
+COPY layers/application.jar /home/app/application.jar
+
+RUN mkdir /home/app/config-dirs
+COPY config-dirs/generateResourcesConfigFile /home/app/config-dirs/generateResourcesConfigFile
+
+RUN native-image -cp /home/app/libs/*.jar:/home/app/resources:/home/app/application.jar --no-fallback -H:Name=application -H:ConfigurationFileDirectories=/home/app/config-dirs/generateResourcesConfigFile -H:Class=com.example.Application
+
+FROM frolvlad/alpine-glibc:alpine-3.12
+RUN apk update &amp;&amp; apk add libstdc++
+COPY --from=graalvm /home/app/application /app/application
+ENTRYPOINT ["/app/application"]</code></pre><p>接下來，使用以下指令來執行服務：</p><pre><code class="language-sh">docker run -i --rm -p 8080:8080 hello-micronaut-and-graalvm</code></pre><p>可以看到，使用 GraalVM 的 Native Image ，只需要 82 ms 就啟動完畢了，相較之前的 1663 ms 快了不少。</p><figure class="kg-card kg-image-card kg-width-full"><img src="https://davisxching.github.io/content/images/2022/04/image-6.png" class="kg-image" alt loading="lazy" width="765" height="131" srcset="https://davisxching.github.io/content/images/size/w600/2022/04/image-6.png 600w, https://davisxching.github.io/content/images/2022/04/image-6.png 765w"></figure><p>另外，在記憶體消耗上，只用了區區 15 MB。</p><figure class="kg-card kg-image-card kg-width-full"><img src="https://davisxching.github.io/content/images/2022/04/image-7.png" class="kg-image" alt loading="lazy" width="649" height="42" srcset="https://davisxching.github.io/content/images/size/w600/2022/04/image-7.png 600w, https://davisxching.github.io/content/images/2022/04/image-7.png 649w"></figure><hr><p><strong>Spring 比較</strong></p><p>現在架設一個相同功能的 Spring 來比較一下，以下是其啟動速度：</p><figure class="kg-card kg-image-card kg-width-full"><img src="https://davisxching.github.io/content/images/2022/04/image-8.png" class="kg-image" alt loading="lazy" width="982" height="305" srcset="https://davisxching.github.io/content/images/size/w600/2022/04/image-8.png 600w, https://davisxching.github.io/content/images/2022/04/image-8.png 982w"></figure><p>可以看到 Spring 的啟動花費了 9091 ms，相較 Micronaut with GraalVM (native-image) 的 82 ms 多了<strong>超過 100 倍</strong>。</p><figure class="kg-card kg-image-card kg-width-full kg-card-hascaption"><img src="https://davisxching.github.io/content/images/2022/04/image-9.png" class="kg-image" alt loading="lazy" width="666" height="46" srcset="https://davisxching.github.io/content/images/size/w600/2022/04/image-9.png 600w, https://davisxching.github.io/content/images/2022/04/image-9.png 666w"><figcaption>上方為 Spring，下方為 Micronaut</figcaption></figure><p>在記憶體的使用上，Spring 花費了 104.6 MB，Micronaut with GraalVM (native-image) 則只花了 15.25 MB，<strong>多花了近 7 倍</strong>。</p><p>從這裡就可以看出，採用後者，在微服務的架構下，有著明顯的優勢。使用這種方式開發基於 Java 的微服務或無伺服器應用也將成為未來的趨勢。筆者也會在其他文章中，對 Micronaut 以及 GraalVM 進行更多的介紹。</p></div>
 
                     <!-- start: .share-buttons -->
                         <div class="share-buttons section">
@@ -376,9 +418,9 @@
                             <a class="whatsapp button circle hide-on-tablet hide-on-desktop" href="whatsapp://send?text=https://davisxching.github.io/micronaut-with-graalvm/" data-action="share/whatsapp/share"><i class="fa fa-whatsapp"></i></a>
                             <a class="facebook button circle" href="https://www.facebook.com/sharer/sharer.php?u=https://davisxching.github.io/micronaut-with-graalvm/"
                         onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"><i class="fa fa-facebook"></i></a>
-                            <a class="twitter button circle" href="http://twitter.com/share?text=Micronaut%20with%20GraalVM%3A%202022%20%E6%9C%80%E4%BD%B3%E7%9A%84%20Java%20%E5%BE%AE%E6%9C%8D%E5%8B%99%E6%A1%86%E6%9E%B6&url=https://davisxching.github.io/micronaut-with-graalvm/"
+                            <a class="twitter button circle" href="http://twitter.com/share?text=Micronaut%20with%20GraalVM's%20native-image%3A%202022%20%E6%9C%80%E4%BD%B3%E7%9A%84%20Java%20%E5%BE%AE%E6%9C%8D%E5%8B%99%E6%A1%86%E6%9E%B6&url=https://davisxching.github.io/micronaut-with-graalvm/"
                         onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;"><i class="fa fa-twitter"></i></a>
-                            <a href="mailto:?subject=Micronaut%20with%20GraalVM%3A%202022%20%E6%9C%80%E4%BD%B3%E7%9A%84%20Java%20%E5%BE%AE%E6%9C%8D%E5%8B%99%E6%A1%86%E6%9E%B6&body=https://davisxching.github.io/micronaut-with-graalvm/" class="email button circle" target="_blank"><i class="fa fa-envelope"></i></a>
+                            <a href="mailto:?subject=Micronaut%20with%20GraalVM's%20native-image%3A%202022%20%E6%9C%80%E4%BD%B3%E7%9A%84%20Java%20%E5%BE%AE%E6%9C%8D%E5%8B%99%E6%A1%86%E6%9E%B6&body=https://davisxching.github.io/micronaut-with-graalvm/" class="email button circle" target="_blank"><i class="fa fa-envelope"></i></a>
                         <div class="clear"></div>
                         <div class="permalink">
                             <input type="text" name="shortlink" value="https://davisxching.github.io/micronaut-with-graalvm/" id="copy-link" readonly>
@@ -484,7 +526,7 @@
                             <div class="meta">
                                 <time datetime="2022-04-05">Apr 5, 2022</time>
                             </div>
-                            <h4 class="title usmall gradient-effect"><a href="/micronaut-with-graalvm/">Micronaut with GraalVM: 2022 最佳的 Java 微服務框架</a></h4>
+                            <h4 class="title usmall gradient-effect"><a href="/micronaut-with-graalvm/">Micronaut with GraalVM&#x27;s native-image: 2022 最佳的 Java 微服務框架</a></h4>
 
                         </div>
                         <div class="clear"></div>
@@ -636,7 +678,7 @@
 							</a>
 						<div class="gradient-effect">
                             <time datetime="2022-04-05">Apr 5, 2022</time>
-							<h4 class="title usmall"><a href="/micronaut-with-graalvm/">Micronaut with GraalVM: 2022 最佳的 Java 微服務框架</a></h4>							
+							<h4 class="title usmall"><a href="/micronaut-with-graalvm/">Micronaut with GraalVM&#x27;s native-image: 2022 最佳的 Java 微服務框架</a></h4>							
 						</div>
 						<div class="clear"></div>
 					</article>

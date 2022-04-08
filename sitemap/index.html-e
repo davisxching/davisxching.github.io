@@ -48,6 +48,7 @@
 <meta name="description" content="歡迎來到我的網站！在這篇置頂的文章中，將會涵蓋，以供快速找到您想閱讀的文章。🦉" />
     <link rel="canonical" href="https://davisxching.github.io/sitemap/" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="amphtml" href="https://davisxching.github.io/sitemap/amp/" />
     
     <meta property="og:site_name" content="Davis Ching" />
     <meta property="og:type" content="article" />
@@ -396,7 +397,7 @@
                         <a href="/micronaut-with-graalvm/" class="full-link"></a>
                         <div class="info">
                             <time datetime="2022-04-05">Apr 5, 2022</time>
-                            <h4 class="title white no-margin">Micronaut with GraalVM: 2022 最佳的 Java 微服務框架</h4>
+                            <h4 class="title white no-margin">Micronaut with GraalVM&#x27;s native-image: 2022 最佳的 Java 微服務框架</h4>
                         </div>
                         <span class="button"><img src="/assets/images/left-arrow.svg?v=a6599e5a67" width="15"></span>
                         <div class="overlay"></div>
@@ -620,7 +621,7 @@
 							</a>
 						<div class="gradient-effect">
                             <time datetime="2022-04-05">Apr 5, 2022</time>
-							<h4 class="title usmall"><a href="/micronaut-with-graalvm/">Micronaut with GraalVM: 2022 最佳的 Java 微服務框架</a></h4>							
+							<h4 class="title usmall"><a href="/micronaut-with-graalvm/">Micronaut with GraalVM&#x27;s native-image: 2022 最佳的 Java 微服務框架</a></h4>							
 						</div>
 						<div class="clear"></div>
 					</article>

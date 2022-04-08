@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html ⚡>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <title>Ghost on Github Page: 這個網站是怎麼生出來的</title>
+
+    <link rel="canonical" href="https://davisxching.github.io/ghost-on-github-page/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    
+    <meta property="og:site_name" content="Davis Ching" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Ghost on Github Page: 這個網站是怎麼生出來的" />
+    <meta property="og:description" content="有玩 Github 的讀者都知道，它佛心地為使用者提供了一套免費的靜態網頁託管服務: Github Pages。為很多想要自己管理一套靜態網頁（如：個人網站、部落格、開源社群或產品官網等網頁）的使用者提供了極大的便利。不然的話，各家雲服務提供商的託管及域名管理等費用，每個月算下來也是一筆不痛但又很癢的固定開銷。 筆者「入行」多年，前前後後在各平台，使用不同的後台系統，架設過多次網站。拿部落格系統來說，Github 官方推薦使用的 Jekyll、神通廣大的 Wordpress 以及短小精悍的 Ghost Blog 都有所涉略。但筆者還是最喜歡 Ghost Blog，它開源免費、輕量便捷、能夠快速集成插件、美化前端簡單、支援網頁自適應等優點，讓它成為了架設個人部落格的首選系統。這此提供了一些 showcase 供讀者參考。 【題外話】近年來很多年輕人都開始使用 Hexo，創作者是台灣人 Tommy351，其官網也提供了架設至 Github" />
+    <meta property="og:url" content="https://davisxching.github.io/ghost-on-github-page/" />
+    <meta property="og:image" content="https://davisxching.github.io/content/images/2022/03/github.jpeg" />
+    <meta property="article:published_time" content="2022-03-27T14:12:41.000Z" />
+    <meta property="article:modified_time" content="2022-04-08T04:52:17.000Z" />
+    <meta property="article:tag" content="General" />
+    <meta property="article:tag" content="Web" />
+    <meta property="article:tag" content="Frontend" />
+    <meta property="article:tag" content="UI/UX" />
+    
+    <meta property="article:publisher" content="https://www.facebook.com/ghost" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ghost on Github Page: 這個網站是怎麼生出來的" />
+    <meta name="twitter:description" content="有玩 Github 的讀者都知道，它佛心地為使用者提供了一套免費的靜態網頁託管服務: Github Pages。為很多想要自己管理一套靜態網頁（如：個人網站、部落格、開源社群或產品官網等網頁）的使用者提供了極大的便利。不然的話，各家雲服務提供商的託管及域名管理等費用，每個月算下來也是一筆不痛但又很癢的固定開銷。 筆者「入行」多年，前前後後在各平台，使用不同的後台系統，架設過多次網站。拿部落格系統來說，Github 官方推薦使用的 Jekyll、神通廣大的 Wordpress 以及短小精悍的 Ghost Blog 都有所涉略。但筆者還是最喜歡 Ghost Blog，它開源免費、輕量便捷、能夠快速集成插件、美化前端簡單、支援網頁自適應等優點，讓它成為了架設個人部落格的首選系統。這此提供了一些 showcase 供讀者參考。 【題外話】近年來很多年輕人都開始使用 Hexo，創作者是台灣人 Tommy351，其官網也提供了架設至 Github" />
+    <meta name="twitter:url" content="https://davisxching.github.io/ghost-on-github-page/" />
+    <meta name="twitter:image" content="https://davisxching.github.io/content/images/2022/03/github.jpeg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Davis Ching 🦉" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="General, Web, Frontend, UI/UX" />
+    <meta name="twitter:site" content="@ghost" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="600" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Davis Ching",
+        "url": "https://davisxching.github.io/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://davisxching.github.io/favicon.ico",
+            "width": 48,
+            "height": 48
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Davis Ching 🦉",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://davisxching.github.io/content/images/2022/03/animal-bird-wild-birds-raptor.jpeg",
+            "width": 910,
+            "height": 607
+        },
+        "url": "https://davisxching.github.io/author/davis-ching/",
+        "sameAs": []
+    },
+    "headline": "Ghost on Github Page: 這個網站是怎麼生出來的",
+    "url": "https://davisxching.github.io/ghost-on-github-page/",
+    "datePublished": "2022-03-27T14:12:41.000Z",
+    "dateModified": "2022-04-08T04:52:17.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://davisxching.github.io/content/images/2022/03/github.jpeg",
+        "width": 1200,
+        "height": 600
+    },
+    "keywords": "General, Web, Frontend, UI/UX",
+    "description": "有玩 Github 的讀者都知道，它佛心地為使用者提供了一套免費的靜態網頁託管服務: Github Pages\n[https://pages.github.com/]。為很多想要自己管理一套靜態網頁（\n如：個人網站、部落格、開源社群或產品官網等網頁）的使用者提供了極大的便利。不然的話，各家雲服務提供商的託管及域名管理等費用，每個月算下來也是一筆不痛但又很癢的固定開銷。\n\n筆者「入行」多年，前前後後在各平台，使用不同的後台系統，架設過多次網站。拿部落格系統來說，Github 官方推薦使用的 Jekyll\n[https://jekyllrb.com/]、神通廣大的 Wordpress [wordpress.org] 以及短小精悍的 Ghost Blog\n[https://ghost.org/] 都有所涉略。但筆者還是最喜歡 Ghost\nBlog，它開源免費、輕量便捷、能夠快速集成插件、美化前端簡單、支援網頁自適應等優點，讓它成為了架設個人部落格的首選系統。這此提供了一些 showcase\n[https://ghost.org/customers/] 供讀者參考。\n\n&gt; 【題外話】近年來很多",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://davisxching.github.io/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 4.41" />
+    <link rel="alternate" type="application/rss+xml" title="Davis Ching" href="https://davisxching.github.io/rss/" />
+
+    <style amp-custom>
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    html {
+        overflow-x: hidden;
+        overflow-y: scroll;
+        font-size: 62.5%;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    body {
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        color: #3a4145;
+        font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+        font-size: 1.7rem;
+        line-height: 1.55em;
+        font-weight: 400;
+        font-style: normal;
+        background: #fff;
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    p,
+    ul,
+    ol,
+    li,
+    dl,
+    dd,
+    hr,
+    pre,
+    form,
+    table,
+    video,
+    figure,
+    figcaption,
+    blockquote {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul[class],
+    ol[class] {
+        padding: 0;
+        list-style: none;
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+    }
+
+    input,
+    button,
+    select,
+    textarea {
+        font: inherit;
+        -webkit-appearance: none;
+    }
+
+    fieldset {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+    label {
+        display: block;
+        font-size: 0.9em;
+        font-weight: 700;
+    }
+
+    hr {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid currentcolor;
+        opacity: 0.1;
+    }
+
+    ::selection {
+        text-shadow: none;
+        background: #cbeafb;
+    }
+
+    mark {
+        background-color: #fdffb6;
+    }
+
+    small {
+        font-size: 80%;
+    }
+
+    sub,
+    sup {
+        position: relative;
+        font-size: 75%;
+        line-height: 0;
+        vertical-align: baseline;
+    }
+    sup {
+        top: -0.5em;
+    }
+    sub {
+        bottom: -0.25em;
+    }
+
+    ul li + li {
+        margin-top: 0.6em;
+    }
+
+    a {
+        color: var(--ghost-accent-color, #1292EE);
+        text-decoration-skip-ink: auto;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0;
+        font-weight: 700;
+        color: #121212;
+        line-height: 1.4em;
+    }
+
+    h1 {
+        font-size: 3.4rem;
+        line-height: 1.1em;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+        line-height: 1.2em;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+    }
+
+    h4 {
+        font-size: 1.7rem;
+    }
+
+    h5 {
+        font-size: 1.6rem;
+    }
+
+    h6 {
+        font-size: 1.6rem;
+    }
+
+    amp-img {
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    amp-img img {
+        object-fit: cover;
+    }
+
+    .page-header {
+        padding: 50px 5vmin 30px;
+        text-align: center;
+        font-size: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .page-header a {
+        color: #121212;
+        font-weight: 700;
+        text-decoration: none;
+        font-size: 1.6rem;
+        letter-spacing: -0.1px;
+    }
+
+    .post {
+        max-width: 680px;
+        margin: 0 auto;
+    }
+
+    .post-header {
+        margin: 0 5vmin 5vmin;
+        text-align: center;
+    }
+
+    .post-meta {
+        margin: 1rem 0 0 0;
+        text-transform: uppercase;
+        color: #738a94;
+        font-weight: 500;
+        font-size: 1.3rem;
+    }
+
+    .post-image {
+        margin: 0 0 5vmin;
+    }
+
+    .post-image img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .post-content {
+        padding: 0 5vmin;
+    }
+
+    .post-content > * + * {
+        margin-top: 1.5em;
+    }
+
+    .post-content [id]:not(:first-child) {
+        margin: 2em 0 0;
+    }
+
+    .post-content > [id] + * {
+        margin-top: 1rem;
+    }
+
+    .post-content [id] + .kg-card,
+    .post-content blockquote + .kg-card {
+        margin-top: 40px;
+    }
+
+    .post-content > ul,
+    .post-content > ol,
+    .post-content > dl {
+        padding-left: 1.9em;
+    }
+
+    .post-content hr {
+        margin-top: 40px;
+    }
+
+    .post .post-content hr + * {
+        margin-top: 40px;
+    }
+
+    .post-content amp-img {
+        background-color: #f8f8f8;
+    }
+
+    .post-content blockquote {
+        position: relative;
+        font-style: italic;
+    }
+
+    .post-content blockquote::before {
+        content: "";
+        position: absolute;
+        left: -1.5em;
+        top: 0;
+        bottom: 0;
+        width: 0.3rem;
+        background: var(--ghost-accent-color, #1292EE);
+    }
+
+    .post-content blockquote.kg-blockquote-alt {
+        font-size: 1.2em;
+        font-style: italic;
+        line-height: 1.6em;
+        text-align: center;
+        color: #738a94;
+        padding: 0.75em 3em 1.25em;
+    }
+
+    .post-content blockquote.kg-blockquote-alt::before {
+        display: none;
+    }
+
+    .post-content :not(.kg-card):not([id]) + .kg-card {
+        margin-top: 40px;
+    }
+
+    .post-content .kg-card + :not(.kg-card) {
+        margin-top: 40px;
+    }
+
+    .kg-card figcaption {
+        padding: 1.5rem 1.5rem 0;
+        text-align: center;
+        font-weight: 500;
+        font-size: 1.3rem;
+        line-height: 1.4em;
+        opacity: 0.6;
+    }
+
+    .kg-card figcaption strong {
+        color: rgba(0,0,0,0.8);
+    }
+
+    .post-content :not(pre) code {
+        vertical-align: middle;
+        padding: 0.15em 0.4em 0.15em;
+        border: #e1eaef 1px solid;
+        font-weight: 400;
+        font-size: 0.9em;
+        line-height: 1em;
+        color: #15171a;
+        background: #f0f6f9;
+        border-radius: 0.25em;
+    }
+
+    .post-content > pre {
+        overflow: scroll;
+        padding: 16px 20px;
+        color: #fff;
+        background: #1F2428;
+        border-radius: 5px;
+        box-shadow: 0 2px 6px -2px rgba(0,0,0,.1), 0 0 1px rgba(0,0,0,.4);
+    }
+
+    .kg-embed-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .kg-image-card img {
+        margin: auto;
+    }
+
+    .kg-gallery-card + .kg-gallery-card {
+        margin-top: 0.75em;
+    }
+
+    .kg-gallery-container {
+        position: relative;
+    }
+
+    .kg-gallery-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .kg-gallery-image {
+        width: 100%;
+        height: 100%;
+    }
+
+    .kg-gallery-row:not(:first-of-type) {
+        margin: 0.75em 0 0 0;
+    }
+
+    .kg-gallery-image:not(:first-of-type) {
+        margin: 0 0 0 0.75em;
+    }
+
+    .kg-bookmark-card,
+    .kg-bookmark-publisher {
+        position: relative;
+    }
+
+    .kg-bookmark-container,
+    .kg-bookmark-container:hover {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+        color: currentColor;
+        background: rgba(255,255,255,0.6);
+        font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+        text-decoration: none;
+        border-radius: 3px;
+        box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.4);
+        overflow: hidden;
+    }
+
+    .kg-bookmark-content {
+        flex-basis: 0;
+        flex-grow: 999;
+        padding: 20px;
+        order: 1;
+    }
+
+    .kg-bookmark-title {
+        font-weight: 600;
+        font-size: 1.5rem;
+        line-height: 1.3em;
+    }
+
+    .kg-bookmark-description {
+        display: -webkit-box;
+        max-height: 45px;
+        margin: 0.5em 0 0 0;
+        font-size: 1.4rem;
+        line-height: 1.55em;
+        overflow: hidden;
+        opacity: 0.8;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+    .kg-bookmark-metadata {
+        margin-top: 20px;
+    }
+
+    .kg-bookmark-metadata {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 1.3rem;
+        line-height: 1.3em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .kg-bookmark-description {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+    }
+
+    .kg-bookmark-metadata amp-img {
+        width: 18px;
+        height: 18px;
+        max-width: 18px;
+        max-height: 18px;
+        margin-right: 10px;
+    }
+
+    .kg-bookmark-thumbnail {
+        display: flex;
+        flex-basis: 20rem;
+        flex-grow: 1;
+        justify-content: flex-end;
+    }
+
+    .kg-bookmark-thumbnail amp-img {
+        max-height: 200px;
+    }
+
+    .kg-bookmark-author {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .kg-bookmark-publisher::before {
+        content: "•";
+        margin: 0 .5em;
+    }
+
+    .kg-toggle-card-icon {
+        display: none;
+    }
+
+    .kg-toggle-content {
+        margin-top: 0.8rem;
+    }
+
+    .kg-product-card-container {
+        background: transparent;
+        padding: 20px;
+        width: 100%;
+        border-radius: 5px;
+        box-shadow: inset 0 0 0 1px rgb(124 139 154 / 25%);
+    }
+
+    .kg-product-card-description p {
+        margin-top: 1.5em;
+    }
+
+    .kg-product-card-description ul {
+        margin-left: 24px;
+    }
+
+    .kg-product-card-title {
+        font-size: 1.9rem;
+        font-weight: 700;
+    }
+
+    .kg-product-card-rating-star {
+        height: 28px;
+        width: 20px;
+        margin-right: 2px;
+    }
+
+    .kg-product-card-rating-star svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+    opacity: 0.15;
+    }
+
+    .kg-product-card-rating-active.kg-product-card-rating-star svg {
+    opacity: 1;
+    }
+
+    .kg-nft-card-container {
+        position: relative;
+        display: flex;
+        flex: auto;
+        flex-direction: column;
+        text-decoration: none;
+        font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+        font-size: 1.4rem;
+        font-weight: 400;
+        box-shadow: 0 2px 6px -2px rgb(0 0 0 / 10%), 0 0 1px rgb(0 0 0 / 40%);
+        width: 100%;
+        max-width: 512px;
+        color: #15212A;
+        background: #fff;
+        border-radius: 5px;
+        transition: none;
+        margin: 0 auto;
+    }
+
+    .kg-nft-metadata {
+        padding: 2.0rem;
+    }
+
+    .kg-nft-image-container {
+        position: relative;
+    }
+
+    .kg-nft-image {
+        display: flex;
+        border-radius: 5px 5px 0 0;
+    }
+
+    .kg-nft-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .kg-nft-header h4.kg-nft-title {
+        font-size: 1.9rem;
+        font-weight: 700;
+        margin: 0;
+        color: #15212A;
+    }
+
+    .kg-nft-header amp-img {
+        max-width: 114px;
+        max-height: 26px;
+    }
+
+    .kg-nft-opensea-logo {
+        margin-top: 2px;
+        width: 100px;
+    }
+
+    .kg-nft-creator {
+        font-family: inherit;
+        color: #95A1AD;
+    }
+
+    .kg-nft-creator span {
+        font-weight: 500;
+        color: #15212A;
+    }
+
+    .kg-nft-card p.kg-nft-description {
+        font-size: 1.4rem;
+        line-height: 1.4em;
+        margin: 2.0rem 0 0;
+        color: #222;
+    }
+
+    .kg-button-card {
+        display: flex;
+        position: static;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .kg-btn {
+        display: flex;
+        position: static;
+        align-items: center;
+        padding: 0 2.0rem;
+        height: 4.0rem;
+        line-height: 4.0rem;
+        font-size: 1.65rem;
+        font-weight: 600;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .kg-btn:hover {
+        opacity: 0.85;
+    }
+
+    .kg-btn-accent {
+        background-color: var(--ghost-accent-color, #1292EE);
+        color: #fff;
+    }
+
+    .kg-callout-card {
+        display: flex;
+        padding: 20px 28px;
+        border-radius: 3px;
+    }
+
+    .kg-callout-card-grey {
+        background: rgba(124, 139, 154, 0.13);
+    }
+
+    .kg-callout-card-white {
+        background: transparent;
+        box-shadow: inset 0 0 0 1px rgba(124, 139, 154, 0.25);
+    }
+
+    .kg-callout-card-blue {
+        background: rgba(33, 172, 232, 0.12);
+    }
+
+    .kg-callout-card-green {
+        background: rgba(52, 183, 67, 0.12);
+    }
+
+    .kg-callout-card-yellow {
+        background: rgba(240, 165, 15, 0.13);
+    }
+
+    .kg-callout-card-red {
+        background: rgba(209, 46, 46, 0.11);
+    }
+
+    .kg-callout-card-pink {
+        background: rgba(225, 71, 174, 0.11);
+    }
+
+    .kg-callout-card-purple {
+        background: rgba(135, 85, 236, 0.12);
+    }
+
+    .kg-callout-card-accent {
+        background: var(--ghost-accent-color);
+        color: #fff;
+    }
+
+    .kg-callout-card-accent a {
+        color: #fff;
+    }
+
+    .kg-callout-emoji {
+        padding-right: 16px;
+        line-height: 1.3;
+        font-size: 1.25em;
+    }
+
+    .kg-header-card {
+        padding: 6em 3em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .kg-header-card.kg-size-small {
+        padding-top: 4em;
+        padding-bottom: 4em;
+    }
+
+    .kg-header-card.kg-size-large {
+        padding-top: 12em;
+        padding-bottom: 12em;
+    }
+
+    .kg-header-card.kg-width-full {
+        padding-left: 4em;
+        padding-right: 4em;
+    }
+
+    .kg-header-card.kg-align-left {
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .kg-header-card.kg-style-dark {
+        background: #15171a;
+        color: #ffffff;
+    }
+
+    .kg-header-card.kg-style-light {
+        color: #15171a;
+        border: 1px solid rgba(124, 139, 154, 0.25);
+        border-width: 1px 0;
+    }
+
+    .kg-header-card.kg-style-accent {
+        background-color: var(--ghost-accent-color);
+    }
+
+    .kg-header-card.kg-style-image {
+        background-color: #e7e7eb;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .kg-header-card h2 {
+        font-size: 4em;
+        font-weight: 700;
+        line-height: 1.1em;
+        margin: 0;
+    }
+
+    .kg-header-card h2 strong {
+        font-weight: 800;
+    }
+
+    .kg-header-card.kg-size-small h2 {
+        font-size: 3em;
+    }
+
+    .kg-header-card.kg-size-large h2 {
+        font-size: 5em;
+    }
+
+    .kg-header-card h3 {
+        font-size: 1.25em;
+        font-weight: 500;
+        line-height: 1.3em;
+        margin: 0;
+    }
+
+    .kg-header-card h3 strong {
+        font-weight: 600;
+    }
+
+    .kg-header-card.kg-size-small h3 {
+        font-size: 1em;
+    }
+
+    .kg-header-card.kg-size-large h3 {
+        font-size: 1.5em;
+    }
+
+    .kg-header-card:not(.kg-style-light) h2,
+    .kg-header-card:not(.kg-style-light) h3 {
+        color: #ffffff;
+    }
+
+    .kg-header-card a.kg-header-card-button {
+        display: flex;
+        position: static;
+        align-items: center;
+        padding: 0 1.2em;
+        height: 2.4em;
+        line-height: 1em;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+        font-size: 0.95em;
+        font-weight: 600;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: opacity 0.2s ease-in-out;
+        background-color: var(--ghost-accent-color);
+        color: #ffffff;
+        margin: 1.75em 0 0;
+    }
+
+    .kg-header-card a.kg-header-card-button:hover {
+        opacity: 0.85;
+    }
+
+    .kg-header-card.kg-size-large a.kg-header-card-button {
+        margin-top: 2em;
+    }
+
+    .kg-header-card.kg-size-small a.kg-header-card-button {
+        margin-top: 1.5em;
+    }
+
+    .kg-header-card.kg-style-image a.kg-header-card-button,
+    .kg-header-card.kg-style-dark a.kg-header-card-button {
+        background: #ffffff;
+        color: #15171a;
+    }
+
+    .kg-header-card.kg-style-accent a.kg-header-card-button {
+        background: #ffffff;
+        color: var(--ghost-accent-color);
+    }
+
+    .kg-audio-card {
+        display: flex;
+        width: 100%;
+        box-shadow: inset 0 0 0 1px rgba(124, 139, 154, 0.25);
+    }
+
+    .kg-audio-thumbnail {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        min-width: 80px;
+        height: 80px;
+        background: transparent;
+        object-fit: cover;
+        aspect-ratio: 1/1;
+        border-radius: 3px 0 0 3px;
+    }
+
+    .kg-audio-thumbnail.placeholder {
+        background: var(--ghost-accent-color);
+    }
+
+    .kg-audio-thumbnail.placeholder svg {
+        width: 24px;
+        height: 24px;
+        fill: white;
+    }
+
+    .kg-audio-player-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        --seek-before-width: 0%;
+        --volume-before-width: 100%;
+        --buffered-width: 0%;
+    }
+
+    .kg-audio-title {
+        width: 100%;
+        padding: 8px 12px 0;
+        border: none;
+        font-family: inherit;
+        font-size: 1.1em;
+        font-weight: 700;
+        background: transparent;
+    }
+
+    .kg-audio-player {
+        display: none;
+    }
+
+    .kg-width-full.kg-card-hascaption {
+        display: grid;
+        grid-template-columns: inherit;
+    }
+
+    .post-content table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    .post-content th {
+        padding: 0.5em 0.8em;
+        text-align: left;
+        font-size: .75em;
+        text-transform: uppercase;
+    }
+
+    .post-content td {
+        padding: 0.4em 0.7em;
+    }
+
+    .post-content tbody tr:nth-child(2n + 1) {
+        background-color: rgba(0,0,0,0.1);
+        padding: 1px;
+    }
+
+    .post-content tbody tr:nth-child(2n + 2) td:last-child {
+        box-shadow:
+            inset 1px 0 rgba(0,0,0,0.1),
+            inset -1px 0 rgba(0,0,0,0.1);
+    }
+
+    .post-content tbody tr:nth-child(2n + 2) td {
+        box-shadow: inset 1px 0 rgba(0,0,0,0.1);
+    }
+
+    .post-content tbody tr:last-child {
+        border-bottom: 1px solid rgba(0,0,0,.1);
+    }
+
+    .page-footer {
+        padding: 60px 5vmin;
+        margin: 60px auto 0;
+        text-align: center;
+        background-color: #f8f8f8;
+    }
+
+    .page-footer h3 {
+        margin: 0.5rem 0 0 0;
+    }
+
+    .page-footer p {
+        max-width: 500px;
+        margin: 1rem auto 1.5rem;
+        font-size: 1.7rem;
+        line-height: 1.5em;
+        color: rgba(0,0,0,0.6)
+    }
+
+    .powered {
+        display: inline-flex;
+        align-items: center;
+        margin: 30px 0 0;
+        padding: 6px 9px 6px 6px;
+        border: rgba(0,0,0,0.1) 1px solid;
+        font-size: 12px;
+        line-height: 12px;
+        letter-spacing: -0.2px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+        font-weight: 500;
+        color: #222;
+        text-decoration: none;
+        background: #fff;
+        border-radius: 6px;
+    }
+
+    .powered svg {
+        height: 16px;
+        width: 16px;
+        margin: 0 6px 0 0;
+    }
+
+    @media (max-width: 600px) {
+        body {
+            font-size: 1.6rem;
+        }
+        h1 {
+            font-size: 3rem;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+        }
+    }
+
+    @media (max-width: 400px) {
+        h1 {
+            font-size: 2.6rem;
+            line-height: 1.15em;
+        }
+        h2 {
+            font-size: 2rem;
+            line-height: 1.2em;
+        }
+        h3 {
+            font-size: 1.7rem;
+        }
+    }
+
+    :root {--ghost-accent-color: #8c083d;}
+    </style>
+
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+    
+
+</head>
+
+<body class="amp-template">
+    <header class="page-header">
+        <a href="https://davisxching.github.io">
+                Davis Ching
+        </a>
+    </header>
+
+    <main class="content" role="main">
+        <article class="post">
+
+            <header class="post-header">
+                <h1 class="post-title">Ghost on Github Page: 這個網站是怎麼生出來的</h1>
+                <section class="post-meta">
+                    Davis Ching 🦉 -
+                    <time class="post-date" datetime="2022-03-27">27 Mar 2022</time>
+                </section>
+            </header>
+            <figure class="post-image">
+                <amp-img src="https://davisxching.github.io/content/images/2022/03/github.jpeg" width="600" height="340" layout="responsive"></amp-img>
+            </figure>
+            <section class="post-content">
+
+                <p>有玩 Github 的讀者都知道，它佛心地為使用者提供了一套免費的<strong>靜態網頁</strong>託管服務: <a href="https://pages.github.com/">Github Pages</a>。為很多想要自己管理一套<strong>靜態網頁（</strong>如：個人網站、部落格、開源社群或產品官網等網頁）的使用者提供了極大的便利。不然的話，各家雲服務提供商的託管及域名管理等費用，每個月算下來也是一筆不痛但又很癢的固定開銷。</p><p>筆者「入行」多年，前前後後在各平台，使用不同的後台系統，架設過多次網站。拿部落格系統來說，Github 官方推薦使用的 <a href="https://jekyllrb.com/">Jekyll</a>、神通廣大的 <a href="wordpress.org">Wordpress</a> 以及短小精悍的 <a href="https://ghost.org/">Ghost Blog</a> 都有所涉略。但筆者還是最喜歡 Ghost Blog，它開源免費、輕量便捷、能夠快速集成插件、美化前端簡單、支援網頁自適應等優點，讓它成為了架設個人部落格的首選系統。這此提供了一些 <a href="https://ghost.org/customers/">showcase</a> 供讀者參考。</p><blockquote>【題外話】近年來很多年輕人都開始使用 <a href="https://hexo.io">Hexo</a>，創作者是台灣人 <a href="https://github.com/tommy351">Tommy351</a>，其官網也提供了架設至 Github Pages 的方法，這裡列出來供各位參考：<a href="https://hexo.io/zh-tw/docs/github-pages.html">https://hexo.io/zh-tw/docs/github-pages.html</a></blockquote><p>然而，Ghost Blog 的背後是一個 Node.js 後台系統，為了能夠將它架設至僅支援靜態頁面的 Github Pages 上，要如何進行呢？沒錯！聰明的讀者一定想到了：只需要在本地端架設部落格系統，然後將所有前端靜態資源抓出來，往 Github Pages 上放即可！</p><p>接下來，筆者將會就此部分展開介紹。</p><hr></hr><h3 id="1-%E5%9C%A8%E6%9C%AC%E5%9C%B0%E7%AB%AF%E6%9E%B6%E8%A8%AD-ghost-blog">1] 在本地端架設 Ghost Blog</h3><figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://ghost.org/docs/install/"><div class="kg-bookmark-content"><div class="kg-bookmark-title">How to install Ghost, the official guide</div><div class="kg-bookmark-description">Everything you need to know about working with the Ghost professional publishing platform.</div><div class="kg-bookmark-metadata"><amp-img class="kg-bookmark-icon" src="https://ghost.org/favicon.ico" alt width="48" height="48" layout="fixed"></amp-img><span class="kg-bookmark-author">Ghost - The Professional Publishing Platform</span></div></div><div class="kg-bookmark-thumbnail"><amp-img src="https://ghost.org/images/meta/Ghost-Docs.jpg" alt width="1000" height="523" layout="responsive"></amp-img></div></a></figure><p>只需要遵循上述官方文件中的步驟進行安裝即可，由於官方網站描述十分清晰，這裡就不重複介紹。推薦使用 Docker 的版本，因為本地安裝需要使用者的環境具備<a href="https://ghost.org/docs/faq/node-versions/">指定版本的 Node</a>。</p><p>安裝好之後，在默認情況下，Ghost Blog 將會在 <code>localhost:2368</code> 被訪問到，而通過 <code>localhost:2368/ghost/</code>  則可以對您的部落格進行管理。</p><hr></hr><h3 id="2-github-pages-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8">2] Github Pages 如何使用</h3><figure class="kg-card kg-image-card kg-width-full"></figure><p>要在 Github Pages 上架設網頁則更加簡單，只需要建立一個名為 <code>your-username.github.io</code> 的 Repository 即可！（這裡的 <em>your-username，</em>指的是您 Github 用戶名。）</p><p>在建立完成之後，訪問 <code>https://your-username.github.io</code> 就會默認導向這個 repo 中的 <em>index.html</em>。在每次上版之後，一般需要等待一段時間 (通常是幾秒至一分鍾不等)，網頁才會產生變化。</p><hr></hr><h3 id="3-ghost-on-github-pages">3] Ghost on Github Pages</h3><p>那麼接下來，只需要將本地架設的 Ghost Blog 前端資源扒出來，再 push 至我們的 Github Pages 的 Repository 即可。</p><p>要做到這一點，目前主要有以下兩個比較熱門的專案可以參考。</p><p>第一個是國外的一名工程師 <a href="https://github.com/paladini/ghost-on-github-pages">Paladini 的專案</a> 。他運用了一隻很古早的 npm 套件(<a href="https://www.npmjs.com/package/buster">buster</a>，[Ghost buster?])，外加上自己的腳本，實現了這個過程。但是筆者目前並不推薦使用這個專案，原因是因為這個 <em>buster</em> 套件已經年久失修，且僅支援低版本的 Node。其二是因為這位工程師的腳本也有些許不足之處，導致還得手動去優化一些內容，才能讓整個過程走的更順。</p><p>而另一隻比較推薦的專案是：<a href="https://github.com/Fried-Chicken/ghost-static-site-generator">ghost-static-site-generator</a>。此方案安裝簡單，使用也方便。只需要一個指令就可以將本地的 Ghost Blog 靜態頁面產出至指定地點，爾後直接推送至上文中提到的 Github Pages' Repositoy 即可。</p><hr></hr><h3 id="4-%E7%BE%8E%E5%8C%96%E7%B6%B2%E9%A0%81">4] 美化網頁</h3><p>遵循上文中的三大步驟，網頁已經可以成功的被訪問了。但為了讓您的網頁更加吸睛，則勢必需要進行一些美化工作。要在 Ghost Blog 中進行美化是非常方便的，大部分資料都可以在 <a href="https://ghost.org/docs/tutorials/">官方介紹</a> 中找到，如添加主題、修改 CSS 或者更改 HTML 等。筆者就不對這些提到的內容進行描述，在此僅介紹官方文檔中未提到的內容：<strong>快速修改字體</strong> 與 <strong>程式碼美化</strong>。</p><p></p><p><strong>快速修改字體</strong></p><p>最快速、便捷的方式就是採用 <a href="https://fonts.google.com/">Google Fonts</a>。可以將字體下載下來，打包至主題裡面。當然，更方便的作法就是遵循它提供的 html 程式碼，直接添加至 header 中即可。爾後只需要將欲使用該字體的元素加入 CSS 即可。這裡提供此網站中使用的方法供大家參考：</p><pre><code class="language-HTML">&lt;link href="https://fonts.googleapis.com/css2?family=Lobster&amp;family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&amp;display=swap" rel="stylesheet"&gt;
+&lt;style&gt;
+    
+    .title, #header nav ul.menu li a, div.text, div.text h1, div.text h2, div.text h3, div.text h4, div.text h5, div.text h6, a, div.tags a, .widget-tag-cloud a, div.articles article div.post-excerpt {
+    	font-family: 'Noto Serif TC', serif;
+    }
+    
+    a.title.large.white.no-margin, a.title.white.no-margin {
+        font-size: 3em;
+        font-family: 'Lobster', cursive;
+    }
+    
+&lt;/style&gt;</code></pre><p></p><p><strong>程式碼美化</strong></p><p>工程師的部落格少不了對程式碼進行展示、分享，這裡就會需要對程式碼進行美化與高亮(因程式語言不同而異)，即對  <code>&lt;pre&gt;</code> 或 <code>&lt;code&gt;</code> 元素進行 CSS 處理。這裡就找到了完美的解方：<a href="highlight.js">highlight.js</a> 。</p><p>以下是在此網站中使用 <em>highlight.js </em>進行美化的方法：</p><pre><code class="language-html">&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/rainbow.min.css"&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/languages/java.min.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript"&gt;
+    window.onload = function() {
+  		hljs.highlightAll();
+    }
+&lt;/script&gt;</code></pre><hr></hr><h3 id="%E7%B5%90%E8%AA%9E">結語</h3><p>本篇文章快速地介紹了此網站的架設方法，以及所有參考連結，希望可以幫到也想將酷酷的 Ghost Blog 架設至 Github Pages 的您。</p>
+
+            </section>
+
+        </article>
+    </main>
+    <footer class="page-footer">
+        <h3>Davis Ching</h3>
+            <p>Ravishing!</p>
+        <p><a href="https://davisxching.github.io">Read more posts →</a></p>
+        <a class="powered" href="https://ghost.org" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 156 156"><g fill="none" fill-rule="evenodd"><rect fill="#15212B" width="156" height="156" rx="27"/><g transform="translate(36 36)" fill="#F6F8FA"><path d="M0 71.007A4.004 4.004 0 014 67h26a4 4 0 014 4.007v8.986A4.004 4.004 0 0130 84H4a4 4 0 01-4-4.007v-8.986zM50 71.007A4.004 4.004 0 0154 67h26a4 4 0 014 4.007v8.986A4.004 4.004 0 0180 84H54a4 4 0 01-4-4.007v-8.986z"/><rect y="34" width="84" height="17" rx="4"/><path d="M0 4.007A4.007 4.007 0 014.007 0h41.986A4.003 4.003 0 0150 4.007v8.986A4.007 4.007 0 0145.993 17H4.007A4.003 4.003 0 010 12.993V4.007z"/><rect x="67" width="17" height="17" rx="4"/></g></g></svg> Published with Ghost</a>
+    </footer>
+    
+</body>
+</html>
